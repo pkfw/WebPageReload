@@ -1,5 +1,5 @@
 function minZeroReload() {
-	fetch(window.location.host).then(r=>{
+	fetch(window.location.origin).then(r=>{
 		const serverTime = new Date(r.headers.get('Date'));
 		const reloadMin = 0;
 		const isMinZero = serverTime.getMinutes() == reloadMin;
